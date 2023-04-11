@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title> Your Shopping Cart | Bike For You</title>
+    <script src="https://kit.fontawesome.com/ee0c402fae.js" crossorigin="anonymous"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Neucha', cursive;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: black;
+}
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: black;
+}
+h4 {
+  font-size: 20px;
+  color: black;
+}
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+p {
+  font-size: 16px;
+  color: black;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: rgb(206, 196, 236);
+  box-shadow: 0 5px 8px rgb(213, 173, 249);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#xxx {
+  background-image: url("/website/companyLogo/1529253670710_GT31LUEPA.1-2.jpg");
+  height: 800px;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 80px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#xxx h4 {
+  padding-bottom: 15px;
+}
+
+#xxx h1 {
+  color: blueviolet; 
+}
+
+#xxx button{
+  background-image: url("#");
+  background-color: transparent;
+  color: blueviolet;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+footer  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .contactinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: rgb(51, 48, 64);
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  text-align: center;
+  width: 100%;
+}
+
+#page-header {
+  background-image: url("/website/cart.jpg");
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#page-header h2,
+#page-header p {
+  color: white;
+}
+
+#shopping-cart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#shopping-cart table img {
+    width: 70px;
+}
+
+#shopping-cart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+#shopping-cart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+#shopping-cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+
+#shopping-cart table td:nth-child(4),
+#shopping-cart table td:nth-child(5),
+#shopping-cart table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+
+#shopping-cart table td:nth-child(5) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#shopping-cart table thead {
+    border: 1px solid rgb(226, 165, 226);
+    border-left: none;
+    border-right: none;
+}
+
+#shopping-cart table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+
+#shopping-cart table tbody tr td {
+    padding: 15px;
+}
+
+#shopping-cart table tbody td {
+    font-size: 13px;
+}
+
+#shopping-cart-total {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#subtotal {
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid rgb(191, 141, 191);
+    padding: 30px;
+}
+
+#subtotal table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#subtotal table td {
+    width: 50%;
+    border: 1px solid rgb(191, 141, 191);
+    padding: 10px;
+    font-size: 13px;
+}
+
+#subtotal h3 {
+    padding-bottom: 15px;
+}
+
+#subtotal button {
+    background-color: #088178;
+    color: white;
+    padding: 12px 20px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+    <section id="header">
+        <a href="aboutus.html"><i id="companylogo" alt="Bike For You" class="fa-solid fa-bicycle"></i></a>
+    
+        <div>
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brand.html">Brand</a></li>
+            <li><a href="bike.html">Bike</a></li>
+            <li><a href="accessories.html">Customization</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="account.html">My account</a></li>
+            <li><a class="active" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+      </section> 
+    
+      <section id="page-header">
+        <h2>Your Shopping Cart</h2>
+        <p></p>
+      </section>
+
+      <section id="shopping-cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><button type="button">Remove</button></a></td>
+                    <td><img src="/website/bike/electric/ExpandBlack_side.webp" alt=" It"></td>
+                    <td>RadExpand 5</td>
+                    <td>$4500.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$4500.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><button type="button">Remove</button></a></td>
+                    <td><img src="/website/bike/electric/Rover6HS_Charcoal_side.webp" alt="It"></td>
+                    <td>RadRover 6 Plus High-Step</td>
+                    <td>$4000.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$4000.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><button type="button">Remove</button></a></td>
+                    <td><img src="/website/bike/electric/RunnerPlus_side.webp" alt=" It"></td>
+                    <td>RadRunner Plus</td>
+                    <td>$5000.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$5000.00</td>
+                </tr>
+            </tbody>
+        </table>
+      </section>
+
+      <section id="shopping-cart-total" class="section-p1">
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>$13500</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>$13500</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to payment</button>
+        </div>
+
+
+      </section>
+
+      <footer class="section-p1">
+        <div class="contactinfo">
+            <i class="fa-solid fa-bicycle"></i>
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>Flat B.8/F.Hingwin Factory Building109 Howming StreetKowloon, Kwun Tong</p>
+            <p><strong>Phone:</strong>+852 4605 0490</p>
+            <p><strong>Hours:</strong>10:00-19:00, Mon - Sat</p>
+        </div>
+      
+        <div class="contactinfo">
+          <h4>About</h4>
+          <a href="aboutus.html"> About us</a>
+          <a href="aboutus.html"> Contact us</a>
+          <a href="https://www.pcpd.org.hk/english/data_privacy_law/ordinance_at_a_Glance/ordinance.html">Privacy Information</a>
+          <a href="https://www.google.com/search?q=delivery+information&oq=delivery+informa&aqs=chrome.0.0i512j69i57j0i512l3j0i30l5.13271j0j4&sourceid=chrome&ie=UTF-8">Delivery Information</a>
+        </div>
+    
+        <div class="contactinfo">
+          <h4>My Account</h4>
+          <a href="login.html"> Sign in</a>
+          <a href="cart.html"> View cart</a>
+          <a href="cart.html">Track my order</a>
+          <a href="aboutus.html">Help</a>
+        </div>
+    
+        <div class="copyright">
+          <p>©2023 Bike For You </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

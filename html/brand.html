@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title> Brand | Bike For You</title>
+    <script src="https://kit.fontawesome.com/ee0c402fae.js" crossorigin="anonymous"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Neucha', cursive;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: black;
+}
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: black;
+}
+h4 {
+  font-size: 20px;
+  color: black;
+}
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+p {
+  font-size: 16px;
+  color: black;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: rgb(206, 196, 236);
+  box-shadow: 0 5px 8px rgb(213, 173, 249);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+
+
+#feature .featurebox{
+  width: 300px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px gainsboro;
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+#feature .featurebox:hover{
+  box-shadow: 10px 10px 54px plum;
+}
+
+#feature .featurebox h6 {
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color: #088178;
+  background-color: #cce7d0;
+}
+
+#feature .featurebox:nth-child(2) h6 {
+  background-color: #cce7d0;
+}
+
+#feature .featurebox img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .contactinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: rgb(51, 48, 64);
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  text-align: center;
+  width: 100%;
+}
+
+</style>
+</head>
+<body>
+  
+  <section id="header">
+    <a href="aboutus.html"><i id="companylogo" alt="Bike For You" class="fa-solid fa-bicycle"></i></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a  class="active" href="brand.html">Brand</a></li>
+        <li><a href="bike.html">Bike</a></li>
+        <li><a href="accessories.html">Customization</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="account.html">My account</a></li>
+        <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+    </div>
+  </section> 
+
+  <section id="feature" class="section-p1">
+    <div class="featurebox">
+      <img src="/website/brand/bianchilogo.png" alt="I'm Stupid">
+      <h6>Bianchi </h6>
+      <a href="https://www.bianchi.com/">Know More</a>
+    </div>
+    <div class="featurebox">
+      <img src="/website/brand/cannondale.png" alt="I'm Stupid">
+      <h6>Cannondale</h6>
+      <a href="https://www.cannondale.com/en">Know More</a>
+    </div>
+    <div class="featurebox">
+      <img src="/website/brand/cervelologo.png" alt="I'm Stupid">
+      <h6>Cervelo</h6>
+      <a href="https://www.cervelo.com/">Know More</a>
+    </div>
+    <div class="featurebox">
+      <img src="/website/brand/dahonlogo.png" alt="I'm Stupid">
+      <h6>Dahon</h6>
+      <a href="https://dahon.com/">Know More</a>
+    </div>
+    <div class="featurebox">
+        <img src="/website/brand/giantlogo.jpg" alt="I'm Stupid">
+        <h6>Giant</h6>
+        <a href="https://www.giant-bicycles.com/tw">Know More</a>
+    </div>
+    <div class="featurebox">
+        <img src="/website/brand/javabikelogo.jpeg" alt="I'm Stupid">
+        <h6>Java Bike</h6>
+        <a href="https://www.javabikes.com/en/">Know More</a>
+    </div>  
+    <div class="featurebox">
+        <img src="/website/brand/konalogo.png" alt="I'm Stupid">
+        <h6>Kona</h6>
+        <a href="https://konaworld.com/">Know More</a>
+    </div>
+    <div class="featurebox">
+        <img src="/website/brand/lectriclogo.png" alt="I'm Stupid">
+        <h6>lectric eBike</h6>
+        <a href="https://lectricebikes.com/">Know More</a>
+    </div>
+    <div class="featurebox">
+        <img src="/website/brand/Marin-Bikes-Logo.png" alt="I'm Stupid">
+        <h6>Marin Bikes</h6>
+        <a href="https://www.marinbikes.com/">Know More</a>
+    </div>
+    <div class="featurebox">
+          <img src="/website/brand/Merida_(Unternehmen)_logo.svg.png" alt="I'm Stupid">
+          <h6>Merida</h6>
+          <a href="https://www.merida-bikes.com/zh-tw/">Know More</a>
+    </div>
+    <div class="featurebox">
+          <img src="/website/brand/pinarellologo.png" alt="I'm Stupid">
+          <h6>Pinarello</h6>
+          <a href="https://pinarello.com/">Know More</a>
+    </div>  
+    <div class="featurebox">
+        <img src="/website/brand/radicon.jpg" alt="I'm Stupid">
+        <h6>Rad Power Bike</h6>
+        <a href="https://www.radpowerbikes.com/">Know More</a>
+    </div>  
+  </section>
+
+  <footer class="section-p1">
+    <div class="contactinfo">
+        <i class="fa-solid fa-bicycle"></i>
+        <h4>Contact</h4>
+        <p><strong>Address:</strong>Flat B.8/F.Hingwin Factory Building109 Howming StreetKowloon, Kwun Tong</p>
+        <p><strong>Phone:</strong>+852 4605 0490</p>
+        <p><strong>Hours:</strong>10:00-19:00, Mon - Sat</p>
+    </div>
+  
+    <div class="contactinfo">
+      <h4>About</h4>
+      <a href="aboutus.html"> About us</a>
+      <a href="aboutus.html"> Contact us</a>
+      <a href="https://www.pcpd.org.hk/english/data_privacy_law/ordinance_at_a_Glance/ordinance.html">Privacy Information</a>
+      <a href="https://www.google.com/search?q=delivery+information&oq=delivery+informa&aqs=chrome.0.0i512j69i57j0i512l3j0i30l5.13271j0j4&sourceid=chrome&ie=UTF-8">Delivery Information</a>
+    </div>
+
+    <div class="contactinfo">
+      <h4>My Account</h4>
+      <a href="login.html"> Sign in</a>
+      <a href="cart.html"> View cart</a>
+      <a href="cart.html">Track my order</a>
+      <a href="aboutus.html">Help</a>
+    </div>
+
+    <div class="copyright">
+      <p>©2023 Bike For You </p>
+    </div>
+</footer>
+
+</body>
+</html>

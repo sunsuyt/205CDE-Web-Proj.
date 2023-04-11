@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title> Details of the Product You Choose | Bike For You</title>
+    <script src="https://kit.fontawesome.com/ee0c402fae.js" crossorigin="anonymous"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Neucha', cursive;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: black;
+}
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: black;
+}
+h4 {
+  font-size: 20px;
+  color: black;
+}
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+p {
+  font-size: 16px;
+  color: black;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: rgb(206, 196, 236);
+  box-shadow: 0 5px 8px rgb(213, 173, 249);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+footer  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .contactinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: rgb(51, 48, 64);
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  text-align: center;
+  width: 100%;
+}
+
+#productdetails .big-product-image {
+    width: 40%;
+    margin-right: 50px;
+}
+
+#productdetails .small-image-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+#productdetails .small-image-column{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#productdetails {
+    display: flex;
+    margin-top: 20px;
+}
+
+#productdetails .single-product-details {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#productdetails .single-product-details h4 {
+    padding: 40px 0 20px 0;
+}
+
+#productdetails .single-product-details h2 {
+    font-size: 26px;
+}
+
+#productdetails .single-product-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#productdetails .single-product-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#productdetails .single-product-details input:focus {
+    outline: none;
+}
+
+#productdetails .single-product-details button {
+    background: #088178;
+    border-radius: 10px;
+    width: 20%;
+    color: white;
+    font-weight: 100;
+}
+
+#productdetails .single-product-details span {
+    line-height: 25px;
+}
+
+
+</style>
+</head>
+<body>
+  <section id="header">
+        <a href="aboutus.html"><i id="companylogo" alt="Bike For You" class="fa-solid fa-bicycle"></i></a>
+    
+        <div>
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brand.html">Brand</a></li>
+            <li><a class="active" href="bike.html">Bike</a></li>
+            <li><a href="accessories.html">Components & Accessories</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="account.html">My account</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+  </section> 
+
+  <section id="productdetails" class="section-p1">
+    <div class="big-product-image">
+        <img src="/website/bike/electric/ExpandBlack_side.webp" width="100%" id="main-image" alt="Sorry, 404ERROR">
+
+        <!--<div class="small-image-group">
+            <div class="small-image-column">
+                <img src="#" width="100%" class="small-image" alt="Sorry 404ERROR">
+            </div>
+            <div class="small-image-column">
+                <img src="#" width="100%" class="small-image" alt="Sorry 404ERROR">
+            </div>
+            <div class="small-image-column">
+                <img src="#" width="100%" class="small-image" alt="Sorry 404ERROR">
+            </div>
+            <div class="small-image-column">
+                <img src="#" width="100%" class="small-image" alt="Sorry 404ERROR">
+            </div>
+        </div>-->
+    </div>
+
+    <div class="single-product-details">
+        <h6>Home  / Bike</h6>
+        <h4>RadRover Expand 5</h4>
+        <h2>$4500</h2>
+        <select>
+            <option> Select Size</option>
+            <option>Best for riders 4'10"-5'10"</option>
+          
+        </select>
+        <select>
+            <option>Select Color</option>
+            <option>Black</option>
+            <option>white</option>
+            
+        </select>
+        <input type="number" value="1">
+        <button class="normal">Add To Cart</button>
+        <h4>Product Details</h4>
+        <span>The RadExpand 5 is the fifth generation of Rad’s folding ebikes. We refined our “best folding electric bike” award-winner into the RadExpand, weighing in nearly five pounds lighter and featuring fatter tires, adjustable handlebars for a custom fit, and an included rear rack. Fold-out out to explore, and fold in to store in your vehicle, RV, apartment, or boat: adventures are yours for the taking.</span>
+    </div>
+
+  </section>
+
+
+  <footer class="section-p1">
+    <div class="contactinfo">
+        <i class="fa-solid fa-bicycle"></i>
+        <h4>Contact</h4>
+        <p><strong>Address:</strong>Flat B.8/F.Hingwin Factory Building109 Howming StreetKowloon, Kwun Tong</p>
+        <p><strong>Phone:</strong>+852 4605 0490</p>
+        <p><strong>Hours:</strong>10:00-19:00, Mon - Sat</p>
+    </div>
+  
+    <div class="contactinfo">
+      <h4>About</h4>
+      <a href="aboutus.html"> About us</a>
+      <a href="aboutus.html"> Contact us</a>
+      <a href="https://www.pcpd.org.hk/english/data_privacy_law/ordinance_at_a_Glance/ordinance.html">Privacy Information</a>
+      <a href="https://www.google.com/search?q=delivery+information&oq=delivery+informa&aqs=chrome.0.0i512j69i57j0i512l3j0i30l5.13271j0j4&sourceid=chrome&ie=UTF-8">Delivery Information</a>
+    </div>
+
+    <div class="contactinfo">
+      <h4>My Account</h4>
+      <a href="login.html"> Sign in</a>
+      <a href="cart.html"> View cart</a>
+      <a href="cart.html">Track my order</a>
+      <a href="aboutus.html">Help</a>
+    </div>
+
+    <div class="copyright">
+      <p>©2023 Bike For You </p>
+    </div>
+</footer>
+
+<script>
+
+    var MainImg = document.getElementById("main-image");
+    var smallimg = document.getElementsByClassName("small-image");
+
+    smallimg[0].onclick = function() {
+        MainImg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick = function() {
+        MainImg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick = function() {
+        MainImg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick = function() {
+        MainImg.src = smallimg[3].src;
+    }
+
+</script>
+
+</body>
+</html>
